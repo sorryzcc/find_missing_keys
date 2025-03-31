@@ -10,7 +10,7 @@ function readExcel(filePath) {
 }
 
 const Ops266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本运营配置表@OpsEvenTranslationConfiguration.xlsx`;
-const OpsXYpath = `./opsXY.xlsx`;
+const OpsXYpath = `./opsXY2.xlsx`;
 
 // 读取 Excel 文件
 const Ops266Data = readExcel(Ops266path);
