@@ -1,1 +1,19 @@
-读取opsXY和ops266表格，找到opsXY表里有的key,ops266没有的key，然后打印成一个表格
+找到opsXYData的key,ops266Data没有的key，然后生成一个表格。
+
+
+Ops266Data:  {
+    ID: 1500095,
+    Key: 'OpsEvent_Event_Title_N_1500098',
+    ToolRemark: '场景：婕拉奥拉活跃活动\r\n使用版本：商业化1测\r\n负责人：vanyawan',
+    Translate: '总价：'
+  },
+  ... 14537 more
+
+  OpsXYData:  {
+    Key: 'OpsEvents_SelfGame_264',
+    Translate: '自练场兑换币3',
+    ToolRemark: 'CN_only'
+  },
+  ... 987 more items
+] OpsXYData
+

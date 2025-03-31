@@ -1,4 +1,4 @@
-const xlsx = require("xlsx");
+const XLSX = require("xlsx");
 const path = require("path");
 
 // 读取 Excel 文件
@@ -15,3 +15,7 @@ const OpsXYpath = `./opsXY.xlsx`;
 // 读取Excel 文件
 const Ops266Data = readExcel(Ops266path, "Ops266path");
 const OpsXYData = readExcel(OpsXYpath, "OpsXYpath");
+
+// console.log(Ops266Data,'Ops266Data');
+console.log(OpsXYData,'OpsXYData');
+
