@@ -1,4 +1,5 @@
-找到opsXYData的key,ops266Data没有的key，然后生成一个表格。
+1找到opsXYData有的key,ops266Data没有的key，然后生成一个表格。
+2找到opsXYData和ops266Data,key一样，但是Translate不一样的数据，然后再生成一个表格
 
 
 Ops266Data:  {
