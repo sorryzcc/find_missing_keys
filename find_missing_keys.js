@@ -9,15 +9,28 @@ function readExcel(filePath) {
     return XLSX.utils.sheet_to_json(worksheet);
 }
 
-const Ops266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本运营配置表@OpsEvenTranslationConfiguration.xlsx`;
-const OpsXYpath = `./opsXY2.xlsx`;
+const map266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本关卡配置表@MapTranslationConfiguration.xlsx`;
+const total266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本配置表@TotalTranslationConfiguration.xlsx`;
+const system266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本系统配置表@SystemTranslationConfiguration.xlsx`;
+const ops266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本运营配置表@OpsEvenTranslationConfiguration.xlsx`;
+const battle266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本战斗配置表@BattleTranslationConfiguration.xlsx`;
+const OpsXYpath = `./batterXS.xlsx`;
+
 
 // 读取 Excel 文件
-const Ops266Data = readExcel(Ops266path);
+const map266Data = readExcel(map266path);
+const total266Data = readExcel(total266path);
+const system266Data = readExcel(system266path);
+const ops266Data = readExcel(ops266path);
+const battle266Data = readExcel(battle266path);
+
 const OpsXYData = readExcel(OpsXYpath);
 
+const merge266Data = [...map266Data,...total266Data,...system266Data,...ops266Data,...battle266Data]
+
+
 // 将数据转换为以 Key 为键的对象，方便查找
-const Ops266Map = new Map(Ops266Data.map(item => [item.Key, item]));
+const Ops266Map = new Map(merge266Data.map(item => [item.Key, item]));
 const OpsXYMap = new Map(OpsXYData.map(item => [item.Key, item]));
 
 // 任务1：找到 OpsXYData 有但 Ops266Data 没有的 Key
