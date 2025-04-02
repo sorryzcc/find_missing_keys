@@ -14,7 +14,7 @@ const total266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/
 const system266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本系统配置表@SystemTranslationConfiguration.xlsx`;
 const ops266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本运营配置表@OpsEvenTranslationConfiguration.xlsx`;
 const battle266path = `D:/PM_Mainland_Trunk_20230321_r552586/PMGameClient/Tables/ResXlsx/266.国内文本战斗配置表@BattleTranslationConfiguration.xlsx`;
-const OpsXYpath = `./batterXS.xlsx`;
+const OpsXYpath = `./Mapxy1.xlsx`;
 
 
 // 读取 Excel 文件
