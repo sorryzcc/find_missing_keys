@@ -25,7 +25,6 @@ const ops266Data = readExcel(ops266path);
 const battle266Data = readExcel(battle266path);
 
 const OpsXYData = readExcel(OpsXYpath);
-
 const merge266Data = [...map266Data,...total266Data,...system266Data,...ops266Data,...battle266Data]
 
 
@@ -41,22 +40,6 @@ for (const key of OpsXYMap.keys()) {
     }
 }
 
-// 任务2：找到 Key 相同但 Translate 不一致的数据
-const inconsistentTranslates = [];
-for (const [key, value] of OpsXYMap.entries()) {
-    if (Ops266Map.has(key)) {
-        const ops266Item = Ops266Map.get(key);
-        if (value.Translate !== ops266Item.Translate) {
-            inconsistentTranslates.push({
-                Key: key,
-                OpsXY_Translate: value.Translate,
-                Ops266_Translate: ops266Item.Translate,
-                ToolRemark: value.ToolRemark || ops266Item.ToolRemark
-            });
-        }
-    }
-}
-
 // 生成 Excel 表格
 function writeExcel(data, outputPath, sheetName = "Sheet1") {
     const worksheet = XLSX.utils.json_to_sheet(data);
@@ -67,6 +50,5 @@ function writeExcel(data, outputPath, sheetName = "Sheet1") {
 
 // 输出结果到文件
 writeExcel(missingKeys, "./missing_keys.xlsx", "Missing Keys");
-writeExcel(inconsistentTranslates, "./inconsistent_translates.xlsx", "Inconsistent Translates");
 
 console.log("处理完成！");
