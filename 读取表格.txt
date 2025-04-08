@@ -1,4 +1,5 @@
-读取表格,新增1列(备注),取值逻辑：
-场景：ToolRemark
-使用版本：Version
-负责人:PO
+ops.xlsx ，这是要查找的列
+
+从opsXY2.xlsx取值
+
+生成一个新表格
